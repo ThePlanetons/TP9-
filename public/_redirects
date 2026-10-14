@@ -1,0 +1,5 @@
+# Real pages get index.html (the React app). Anything else falls through to 404.html with a true 404 status.
+/privacy   /index.html   200
+/privacy/  /index.html   200
+/terms     /index.html   200
+/terms/    /index.html   200

@@ -1,0 +1,2 @@
+@keyframes bob { from { transform: translateY(-0.9cqw); } to { transform: translateY(0.9cqw); } }
+@media (prefers-reduced-motion: reduce) { [data-dev] div, [data-dev] span { animation: none !important; } }
