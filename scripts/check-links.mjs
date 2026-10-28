@@ -41,6 +41,9 @@ for (const h of hrefs) {
   if (hash && !ids.has(hash)) { bad.push([h, `no element with id="${hash}"`]); continue }
   ok.push(h)
 }
+// Placeholder social URLs left in the config
+const placeholders = [...cfg.matchAll(/'(https?:\/\/[^']*YOUR_[^']*)'/g)].map((m) => m[1])
+for (const u of placeholders) bad.push([u, 'placeholder in src/config/site.ts — replace YOUR_HANDLE with the real profile (or set it to \'\' to hide the icon)'])
 console.log(`internal OK: ${ok.length}   external: ${external.length}   routes: ${routes.join(' ')}`)
 if (process.argv.includes('--external')) {
   for (const u of external) {
